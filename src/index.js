@@ -1,6 +1,6 @@
 import { render } from "react-dom";
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route
 } from "react-router-dom";
@@ -10,13 +10,13 @@ import Invoices from "./routes/invoices";
 
 const rootElement = document.getElementById("root");
 render(
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="expenses" element={<Expenses />} />
         <Route path="invoices" element={<Invoices />} />
       </Route>
     </Routes>
-  </BrowserRouter>,
+  </HashRouter>,
   rootElement
 );
